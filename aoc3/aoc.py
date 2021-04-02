@@ -22,6 +22,8 @@ for row, col in zip(range(height), count(0, 3)):
 
 print('Part 1:', trees)
 
+###############################################3
+
 def tree_count(x, y=1):
 
     grid = [l.strip() for l in fin]
