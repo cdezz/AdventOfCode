@@ -12,15 +12,17 @@ def check_validity(p: str):
     regex = re.findall('[a-z]{3}:', p)
     if len(regex) == 8:
         return True
-    elif len(regex) == 7 and ('cid:' in set(regex)):
+    elif len(regex) == 7 and ('cid:' not in set(regex)):
         return True
     return False
 
 print(check_validity(first))
 
 valid = 0
+i = 0
 while i < length:
-    i = 0
     if check_validity(passports[i]):
         valid += 1
     i += 1
+
+print('Valid Passports: ', valid)
