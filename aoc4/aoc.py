@@ -4,8 +4,6 @@ with open("input.txt", 'r') as f:
     passports = f.read()
     passports = passports.split('\n\n')
 
-first = passports[0]
-
 length = len(passports)
 
 def check_validity(p: str):
@@ -15,8 +13,6 @@ def check_validity(p: str):
     elif len(regex) == 7 and ('cid:' not in set(regex)):
         return True
     return False
-
-print(check_validity(first))
 
 valid = 0
 i = 0
