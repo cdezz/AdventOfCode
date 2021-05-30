@@ -3,7 +3,6 @@ from collections import Counter
 with open('input.txt', 'r') as f:
     input = f.read()
 
-# [' \na\nb\nc', 'ab\nac', 'a\na\na\na', 'b\n']
 groups = [group for group in input.split('\n\n')]
 
 count = 0
